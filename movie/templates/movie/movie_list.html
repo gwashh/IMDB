@@ -1,17 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Most Watched</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+{% extends 'base.html' %}
+{% block body %}
+        <main class="content">
+            <section class="centered">
+                <h3>Most Watched Movies</h3>
+                <div class="movies">
+                    <div class="mov">
+                        <a href="single.html">
+                            <img src="">
+                            <h2 class="movietitle">The Space Between Us</h2>
+                        </a>
+                    </div>
+                    <div class="mov">
+                        <a href="single.html">
+                            <img src="">
+                            <h2 class="movietitle">Transformers</h2>
+                        </a>
+                    </div>
+                    <div class="mov">
+                        <a href="single.html">
+                            <img src="">
+                            <h2 class="movietitle">Fifty Shades Darker</h2>
+                        </a>
+                    </div>
+                    <div class="mov">
+                        <a href="single.html">
+                            <img src="">
+                            <h2 class="movietitle">XXX</h2>
+                        </a>
+                    </div>
 
-    <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="css/swiper.min.css">
-    <link rel="stylesheet" href="css/style.css">
-
-    <script scr="js/jquery-3.1.1."></script>
-</head>
-<body>
-    
-</body>
-</html>
+                </div>
+            </section>
+        </main>
+        {% endblock %}
