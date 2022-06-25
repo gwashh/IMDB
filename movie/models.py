@@ -5,10 +5,10 @@ from django.db import models
 # Create your models here.
 
 CATEGORY_CHOICES = (
-    # ('A','ACTION')
-    # ('D','DRAMA')
-    # ('C','COMEDY')
-    # ('R','ROMANCE')
+    ('A','ACTION'),
+    ('D','DRAMA'),
+    ('C','COMEDY'),
+    ('R','ROMANCE'),
 )
 
 LANGUAGE_CHOICES = (
@@ -17,13 +17,10 @@ LANGUAGE_CHOICES = (
 )
 
 STATUS_CHOICES = (
-    # ('RA' , 'RECENTLY ADDED')
-    # ('MW' , 'MOST WATCHED')
-    # ('TR' , 'TOP RATED')
+    ('RA' , 'RECENTLY ADDED'),
+    ('MW' , 'MOST WATCHED'),
+    ('TR' , 'TOP RATED'),
 )
-
-
-
 
 
 class Movie(models.Model):
@@ -35,6 +32,10 @@ class Movie(models.Model):
     status = models.CharField(choices=STATUS_CHOICES , max_length=2)
     year_of_production = models.DateField()
     view_count = models.IntegerField(default=0)
+
+
+    def __str__(self):
+        return self.title
     
 
 
