@@ -14,42 +14,50 @@
      <script src="{% static 'js/jquery-3.1.1.min.js' %}"></script>
      <script scr="{% static 'js/script.js' %}"></script>
 
+     <!-- fav-icon -->
+     <link rel="" href="">
 
-     <!-- Demo styles -->
+     <!-- stylesheet -->
      <style>
-     
-     ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
+         html {
+   margin: 0;
+   background: #333;
+   font-family: helvetica;
+   max-width: 1920px;
+   background-image: 2000051.jpg;
 }
 
-li {
-  float: left;
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: solid;
-}
 
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}  
+         body{
+             margin: 0;
+             background-image: 2000051.jpg;
+         }
 
+
+         ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:beige
+  }
+  
+  li {
+    float: left;
+    display: block;
+    color:black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: solid;
+  }
      </style>
+
 </head>
-<body>
+ <body>
     <div class="wrapper">
 
         <header class="header">
-            <figure class="logo"><a href="#"><img src="./images/2000051.jpg" alt="logo"></figure></a>
+            <figure class="logo"><a href="#"><img src="./images/" alt="logo"></figure></a>
             <nav class="menu">
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -158,6 +166,6 @@ li a {
 
     </div>
      
-</body>
+ </body>
 </html>
 {% load static %}
