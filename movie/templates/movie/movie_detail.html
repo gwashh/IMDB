@@ -1,1 +1,75 @@
-<h2>Welcome In Movie Detail</h2>
+{% extends 'base.html' %}
+{% block body %}
+
+
+    <main class="content">
+        <div class="single">
+
+            <section class="trailer">
+                <h3>Trailer</h3>
+                <div class="trailer_frame">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/5bL1ftuxgOE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </section>
+            <section class="movie">
+                <img src="{{object.image.url}}">
+                <ul>
+                    <li>{{object}}</li>
+                    <li>{{object.desription}}</li>
+                    <li><a href="genre.html">Adventure</a>, <a href="genre.html">drama</a>, <a href="genre.html">Romance</a></li>
+                    <li><a href="cast.html">Gary Oldman</a>, <a href="cast.html">Asa Butterfield</a></li>
+                    <li>{{object.views_count}} views</li>
+                </ul>
+            </section>
+            <section class="links">
+                <h3>Links</h3>
+                <ul class="dlinks">
+                    <li><a>Downloads</a></li>
+                    <li><a href="#">Link1</a></li>
+                    <li><a href="#">Links2</a></li>
+                    <li><a href="Link3"></a></li>
+                </ul>
+                <ul class="wlinks">
+                    <li><a>Watch</a></li>
+                    <li><a href="#">Link1</a></li>
+                    <li><a href="#">Link2</a></li>
+                    <li><a href="#">Link3</a></li>\
+
+                </ul>
+                    
+            </section>
+
+            <section class="related">
+                <h3>Related movies</h3>
+                <div class="relatemovie">
+                    <a href="#"><img src=""></a>
+                    <a href="#"><span class="relatename">John Wick</span></a>
+                </div>
+                <div class="relatemovie">
+                    <a href="#"><img scr=""></a>
+                    <a href="#"><span class="relatedname">Spider Man Homecoming</span></a>
+                </div>
+                <div class="relatemovie">
+                    <a href="#"><img src=""></a>
+                    <a href="#"><span class="relatedname">Beauty and The Beast</span></a>
+                </div>
+                <div class="relatemovie">
+                    <a href="#"><img src=""></a>
+                    <a href="#"><span class="relatedname">Piates of the Caribbean: Dead Men Tell No Tales</span></a>
+                </div>
+                <div class="relatemovie">
+                    <a href="#"><img src=""></a>
+                    <a href="#"><span class="relatedname">fity Sahdes Darker</span></a>
+                </div>
+                <div class="relatemovie">
+                    <a href="#"><img src=""></a>
+                    <a href="#"><span class="relatedname">Transformers</span></a>
+                </div>
+
+            </section>
+            
+            
+        </div>
+    </main>
+
+{% endblock body %}

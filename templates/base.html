@@ -8,10 +8,10 @@
     
 
      <!-- link Swiper's CSS -->
-     <link rel="stylesheet" href="{% static 'css/swiper.min.css' %">
-     <link rel="stylesheet" href="{% static 'css/styles.css' %">
+     <!-- <link rel="stylesheet" href="{% static 'static/swiper.min.css' %"> -->
+     <link rel="stylesheet" href="{% static 'static/styles.css' %">
 
-     <script src="{% static 'js/jquery-3.1.1.min.js' %}"></script>
+     <!-- <script src="{% static 'js/jquery-3.1.1.min.js' %}"></script> -->
      <script scr="{% static 'js/script.js' %}"></script>
 
      <!-- fav-icon -->
@@ -20,36 +20,67 @@
      <!-- stylesheet -->
      <style>
          html {
-   margin: 0;
-   background: #333;
-   font-family: helvetica;
-   max-width: 1920px;
-   background-image: 2000051.jpg;
-}
-
-
-         body{
-             margin: 0;
-             background-image: 2000051.jpg;
-         }
-
-
-         ul {
-    list-style-type: none;
     margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color:beige
+    background: #333;
+    font-family: helvetica;
+    max-width: 1920px;
+    background-image: 2000051.jpg;
+ }
+ 
+ 
+          body{
+              margin: 0;
+              background-image: 2000051.jpg;
+          }
+ 
+ 
+          ul {
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+     overflow: hidden;
+     background-color:beige
+   }
+   
+   li {
+     float: left;
+     display: block;
+     color:black;
+     text-align: center;
+     padding: 14px 16px;
+     text-decoration: solid;
+   }
+    
+   .dropbtn {
+  background-color:darkred;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
   }
+
+  .dropdown {
+  position: relative;
+  display: inline-block;
+}
+   
+    .dropdown-content{
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }  
+    
+    .dropdown.dropdown-content {
+  display: block;
+   }
+
+
+
+
+
   
-  li {
-    float: left;
-    display: block;
-    color:black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: solid;
-  }
      </style>
 
 </head>
@@ -57,31 +88,39 @@
     <div class="wrapper">
 
         <header class="header">
-            <figure class="logo"><a href="#"><img src="./images/" alt="logo"></figure></a>
+            <figure class="logo"><a href="/"><img src="{%static 'img/IMDB.png' %}" alt="logo" width="70" height="60"></figure></a>
             <nav class="menu">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a>Genres</a>
-                        <ul>
+                    <div class="dropdown">
+                           <button class="dropbtn">Genres</button>
+                           <div class="dropdown-content" style="float:inline-start">
                             <li><a href="genre.html">Action</a></li>
                             <li><a href="genre.html">Comedy</a></li>
                             <li><a href="genre.html">Drama</a></li>
                             <li><a href="genre.html">Romance</a></li>
+                            </div>
                         </ul>
+                    </div>
                     </li>
-                    <li><a>Year</a>
-                        <ul>
-                            <li><a href="genre.html">2017</a></li>
-                            <li><a href="genre.html">2016</a></li>
-                            <li><a href="genre.html">2015</a></li>
-                            <li><a href="genre.html">2014</a></li>
-                        </ul>
+                    <div class="dropdown">
+                            <button class="dropbtn">Year</button>
+                            <div class="dropdown-content" style="float:none;">
+                            <a href="genre.html">2017</a></li>
+                            <a href="genre.html">2016</a></li>
+                            <a href="genre.html">2015</a></li>
+                            <a href="genre.html">2014</a></li>
+                            </div> 
+                    </div>
                     </li>
-                    <li><a>Language</a>
-                        <ul>
-                            <li><a href="language.html">English</a></li>
-                            <li><a href="language.html">German</a></li>
-                        </ul>
+                    <div class="dropdown">
+                           <button class="dropbtn">Language</button>
+                            <div class="dropdown-content" style="float:inline-end"></div>
+                            <a href="language.html">English</a></li>
+                            <a href="language.html">German</a></li>
+                            
+                        
+                    </div>
                     </li>
                     <li><a href="mostwatched.html">Most Watched</a></li>
                     <li class="mobsearch">
@@ -98,6 +137,20 @@
             </form>
 
             <div class="toogle"><img src=""></div>
+            
+            <!-- <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Dropdown
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li> -->
+
+
         </header>
         <!-- Swiper -->
         <div class="homeslider">
